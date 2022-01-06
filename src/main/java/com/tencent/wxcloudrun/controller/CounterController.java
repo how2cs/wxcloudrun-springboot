@@ -60,6 +60,7 @@ public class CounterController {
 
     Optional<Counter> curCounter = counterService.getCounter(1);
     if (request.getAction().equals("inc")) {
+      // 计数器一次增加2
       Integer count = 2;
       if (curCounter.isPresent()) {
         count += curCounter.get().getCount();
